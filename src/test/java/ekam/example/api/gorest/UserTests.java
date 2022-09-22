@@ -12,7 +12,8 @@ public class UserTests extends APITest {
 
     @Test(groups = "api")
     public void shouldReturnSingleUserTest() {
-        GetSingleUserResponse user = Client(UserClient.class).getSingleUser();
+        GetSingleUserResponse user = Client(UserClient.class)
+                .getSingleUser();
 
         assertNotNull(user.getEmail());
 //        System.out.println(user.getName());
